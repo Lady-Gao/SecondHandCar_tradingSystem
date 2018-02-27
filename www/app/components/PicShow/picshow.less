@@ -1,0 +1,229 @@
+ 
+.picshow{
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:content-box;
+    }
+
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: black;
+    overflow: hidden;
+
+    .bigImg{
+        position: absolute;
+        width:100%;
+        height:100%;
+        box-sizing: border-box;
+        padding-right:360px;
+       
+
+        .inner{
+            position: relative;
+            height:100%;
+             background:url("/images/loading.svg") center center no-repeat;
+             background-size:100px 100px;
+            img{
+                width:90%;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+            }
+
+            .rightBtn{
+                position: absolute;
+                width:50%;
+                height:100%;
+                right:0;
+                top:0;
+                cursor:url(/images/picture-cursor-right.cur),auto;
+            }
+            .leftBtn{
+                position: absolute;
+                width:50%;
+                height:100%;
+                left:0;
+                top:0;
+                cursor:url(/images/picture-cursor-left.cur),auto;
+            }
+        }
+    }
+
+    .rightPart{
+        position: absolute;
+        right:0;
+        top:0;
+        width:360px;
+        height:100%;
+        background-color: #121211;
+   
+        .albumNav{
+            padding:20px;
+            padding-top:0;
+            padding-bottom:0;
+            overflow: hidden;
+            h3{
+                line-height: 200%;
+                font-size: 18px;
+                color:white;
+            }
+            ul{
+                list-style: none;
+                width:310px;
+                li{
+                    box-sizing:border-box;
+                    float:left;
+                    width: 150px;
+                    border:1px solid #333;
+                    padding:10px;
+                    font-size: 14px;
+                    margin-right:10px;
+                    margin-bottom: 10px;
+                    color:white;
+                    cursor: pointer;
+
+                    &:nth-child(2n){
+                        margin-right:0;
+                    }
+
+                    &.cur{
+                        background-color: gold;
+                        color:black;
+                    }
+                }
+            }
+        }
+        .carLike{
+            padding:20px;
+            padding-top:0;
+            color:white;
+            overflow: hidden;
+            position: relative;
+
+        
+
+            h3{
+                line-height: 200%;
+                font-size: 18px;
+                color:white;
+            }
+
+            .main{
+                 position: relative;
+                 overflow: hidden;
+
+                .bar{
+                    position: absolute;
+                    right:0;
+                    top:0;
+                    height:100%;
+                    width:18px;
+                    background-color: #333;
+
+                    b{
+                        display: block;
+                        width:18px;
+                        background-color: #e0e0e0;
+                        border-radius: 5px; 
+                    }
+                }
+           
+
+           
+        
+
+                ul{
+                    list-style: none;
+                    height:120px;
+                    padding-right:30px;
+                    position:relative;
+
+                    li{
+                        border:1px solid white;
+                        padding:4px 6px;
+                        margin-bottom:10px;
+
+                        font-size: 13px;
+
+                        cursor: pointer;
+
+                        &.cur{
+                            background-color: gold;
+                            color:black;
+                        }
+                    }
+                }
+             }
+        }
+        .smallPicNav{
+            padding:20px;
+            padding-top:0;
+            height:320px;
+            overflow: hidden;
+            .inner{
+                overflow: hidden;
+           
+                .unit {
+                    width:21000px;
+                    position: relative;
+                
+                    ul{
+                        list-style: none;
+                        float: left;
+                        width:320px;
+                        height:230px;
+
+                        li{
+                            float: left;
+                          
+                            width:150px;
+                            margin-right: 10px;
+                            margin-bottom: 10px;
+                            position:relative;
+                            cursor: pointer;
+
+                            img{
+                                width:100%;
+                            }
+                            &::before{
+                                content:"";
+                                position:absolute;
+                                width:100%;
+                                height:100%;
+                                background-color: rgba(0,0,0,.5);
+                                transition:all 1s ease 0s;
+                            }
+                            &.cur::before{
+                                background-color:  rgba(0,0,0,0);
+                            }
+                        }
+                    }
+                }
+
+                ol{
+                    list-style: none;
+
+                    li{
+                        float:left;
+                        height:10px;
+                        background-color: white;
+                        margin-right:4px;
+                        cursor: pointer;
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
+
+                        &.cur{
+                            background-color: gold;
+                        }
+                    }
+                }
+             }
+        }
+     }
+}

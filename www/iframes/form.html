@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form id="myform" action="/up_avatar" method="post" enctype="multipart/form-data">
+		<input type="file" name="avatar_file" hidden id="avatar_file">
+		<input type="button" value="更改头像" id="change_avatar_btn"/>
+		* 必须以标准证件照做头像
+	</form>
+
+	<script type="text/javascript" src="/js-lib/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$("#change_avatar_btn").click(function(){
+			$("#avatar_file").trigger("click");
+		});
+
+		$("#avatar_file").bind("change" , function(){
+			$("#myform").submit();
+		})
+	</script>
+</body>
+</html>
