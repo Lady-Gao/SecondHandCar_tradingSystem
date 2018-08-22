@@ -9,7 +9,7 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-node 模拟数据
+node 模拟数据  项目链接本地数据库
 
 ![image](pic/0.png)
 ![image](pic/1.png)
